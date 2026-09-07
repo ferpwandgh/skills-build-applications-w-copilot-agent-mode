@@ -20,8 +20,8 @@ function Users() {
         <div><p className="eyebrow">Community</p><h1>Athletes</h1></div>
         <span className="count-pill">{users.length} active</span>
       </div>
-      {status === 'error' && <p className="notice notice-error">Athlete data could not be loaded.</p>}
-      {status === 'loading' && <p className="loading-state">Loading athletes...</p>}
+      {status === 'error' && <p className="notice notice-error" role="alert">Athlete data could not be loaded.</p>}
+      {status === 'loading' && <p className="loading-state" role="status">Loading athletes...</p>}
       <div className="data-grid">
         {users.map((user) => (
           <article className="data-card" key={user._id || user.id || user.username}>

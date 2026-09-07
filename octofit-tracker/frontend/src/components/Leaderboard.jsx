@@ -14,8 +14,8 @@ function Leaderboard() {
   return (
     <section className="page-section">
       <div className="section-heading"><div><p className="eyebrow">Friendly competition</p><h1>Leaderboard</h1></div><span className="season-label">September 2026</span></div>
-      {status === 'error' && <p className="notice notice-error">Leaderboard data could not be loaded.</p>}
-      {status === 'loading' && <p className="loading-state">Loading rankings...</p>}
+      {status === 'error' && <p className="notice notice-error" role="alert">Leaderboard data could not be loaded.</p>}
+      {status === 'loading' && <p className="loading-state" role="status">Loading rankings...</p>}
       <div className="ranking-list">
         {leaders.map((leader, index) => (
           <article className={`ranking-item ${index === 0 ? 'ranking-item-top' : ''}`} key={leader._id || leader.id || leader.userId || index}>

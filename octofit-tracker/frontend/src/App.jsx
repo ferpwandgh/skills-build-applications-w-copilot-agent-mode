@@ -35,7 +35,7 @@ function Home() {
 
 function App() {
   const location = useLocation()
-  const currentPage = navigation.find((item) => location.pathname.startsWith(item.path))
+  const currentPage = navigation.find((item) => location.pathname === item.path || location.pathname.startsWith(`${item.path}/`))
 
   return (
     <div className="app-shell">
@@ -46,7 +46,7 @@ function App() {
         </nav>
         <div className="profile-chip"><span className="profile-avatar">M</span><span className="profile-name">Maya Chen</span></div>
       </header>
-      <main>
+      <main aria-label={currentPage ? currentPage.label : 'OctoFit home'}>
         {currentPage && <div className="route-label"><span>OctoFit /</span> {currentPage.label}</div>}
         <Routes>
           <Route path="/" element={<Home />} />

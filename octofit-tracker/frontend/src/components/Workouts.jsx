@@ -14,8 +14,8 @@ function Workouts() {
   return (
     <section className="page-section">
       <div className="section-heading"><div><p className="eyebrow">Built for your goals</p><h1>Workouts</h1></div><span className="count-pill">{workouts.length} plans</span></div>
-      {status === 'error' && <p className="notice notice-error">Workout data could not be loaded.</p>}
-      {status === 'loading' && <p className="loading-state">Loading workouts...</p>}
+      {status === 'error' && <p className="notice notice-error" role="alert">Workout data could not be loaded.</p>}
+      {status === 'loading' && <p className="loading-state" role="status">Loading workouts...</p>}
       <div className="workout-grid">
         {workouts.map((workout) => (
           <article className="workout-card" key={workout._id || workout.id || workout.title}>

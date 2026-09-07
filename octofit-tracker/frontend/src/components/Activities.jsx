@@ -14,8 +14,8 @@ function Activities() {
   return (
     <section className="page-section">
       <div className="section-heading"><div><p className="eyebrow">Movement log</p><h1>Recent activity</h1></div><span className="count-pill">{activities.length} sessions</span></div>
-      {status === 'error' && <p className="notice notice-error">Activity data could not be loaded.</p>}
-      {status === 'loading' && <p className="loading-state">Loading activity...</p>}
+      {status === 'error' && <p className="notice notice-error" role="alert">Activity data could not be loaded.</p>}
+      {status === 'loading' && <p className="loading-state" role="status">Loading activity...</p>}
       <div className="table-shell">
         <div className="activity-row activity-header"><span>Activity</span><span>Athlete</span><span>Duration</span><span>Points</span></div>
         {activities.map((activity, index) => (

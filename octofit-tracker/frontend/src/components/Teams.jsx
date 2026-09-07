@@ -14,8 +14,8 @@ function Teams() {
   return (
     <section className="page-section">
       <div className="section-heading"><div><p className="eyebrow">Find your people</p><h1>Teams</h1></div><span className="count-pill">{teams.length} squads</span></div>
-      {status === 'error' && <p className="notice notice-error">Team data could not be loaded.</p>}
-      {status === 'loading' && <p className="loading-state">Loading teams...</p>}
+      {status === 'error' && <p className="notice notice-error" role="alert">Team data could not be loaded.</p>}
+      {status === 'loading' && <p className="loading-state" role="status">Loading teams...</p>}
       <div className="team-grid">
         {teams.map((team) => (
           <article className="team-card" key={team._id || team.id || team.name}>

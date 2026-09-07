@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { fetchCollection, getDisplayName } from '../api'
 
+// API endpoint: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/activities/
 function Activities() {
   const [activities, setActivities] = useState([])
   const [status, setStatus] = useState('loading')

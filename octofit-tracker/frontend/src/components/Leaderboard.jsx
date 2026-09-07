@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { fetchCollection, getDisplayName } from '../api'
 
+// API endpoint: https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/leaderboard/
 function Leaderboard() {
   const [leaders, setLeaders] = useState([])
   const [status, setStatus] = useState('loading')
